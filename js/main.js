@@ -1,39 +1,3 @@
-// // 3. This function creates an <iframe> (and YouTube player)
-// //    after the API code downloads.
-// function onYouTubeIframeAPIReady() {
-
-// }
-
-// // 4. The API will call this function when the video player is ready.
-// function onPlayerReady(event) {
-// 	ready = true;
-// 	playVideo();
-// }
-
-// function onPlayerStateChange(event) {
-
-// }
-
-// function stopVideo() {
-// 	if( ready && $(document).width() > 680 ) {
-// 	} else {
-// 		$("#player").remove();
-// 	}
-// }
-
-// function pauseVideo() {
-// 	if( ready && $(document).width() > 680 ) {
-// 		player.pauseVideo();
-// 	}
-// }
-
-// function playVideo() {
-// 	if( ready && $(document).width() > 680  ) {
-// 		player.seekTo(0);
-// 		player.playVideo();
-// 	}
-// }
-
 /**
  * Returns a random number between min and max
  */
@@ -47,10 +11,6 @@ function getRandomArbitary (min, max) {
  */
 function getRandomInt (min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-function onMessageReceived(e) {
-	var data = JSON.parse(e);
 }
 
 function nextOrFirst() {
@@ -84,48 +44,21 @@ $(window).load(function(){
 	});
 });
 
-var client, count = 0, humans = new Array();
 var player, done, ready = false;
 var mobile = false;
 $(document).ready(function() {
-	$("#wrapper").css({
-		top: ($(document).height()/2 - $("#wrapper").height()/2) - $("#footer").height()
+
+	$("#logo").css({
+		left: $(document).width()/2 - $("#logo").width()/2,
+		top: $(document).height()/2 - $("#logo").height()/2
 	});
 
 	$(window).resize(function(){
-		$("#wrapper").css({
-			top: ($(document).height()/2 - $("#wrapper").height()/2) - $("#footer").height() + 26
-		});		
+		$("#logo").css({
+			left: $(document).width()/2 - $("#logo").width()/2,
+			top: $(document).height()/2 - $("#logo").height()/2
+		});
 	})
-
-	client = new Client( window, {
-		username: "client"+getRandomInt(1,1000),
-		roomname: "touchsite12892",
-		host: "54.214.250.91",
-		port: "8882",
-		secure: false,
-		debug: false
-	});
-
-	client.addEvent("position","object",function(msg) {
-		if( humans[msg.sid] ) {
-			$("#"+msg.sid).stop().animate({
-				left: msg.x * ( $(document).width() / msg.w ),
-				top: msg.y,
-				opacity: .3
-			}, 1500, "easeInOutCubic");
-		} else {
-			$("#humans").append('<div id="'+msg.sid+'" class="human"></div>');
-			$("#"+msg.sid).css({
-				left: msg.x * ( $(document).width() / msg.w ),
-				top: msg.y,
-				opacity: 0
-			}).stop().animate({
-				opacity: .3
-			});
-			humans[msg.sid] = msg;
-		}
-	});
 
 	// 2. This code loads the IFrame Player API code asynchronously.
 	var tag = document.createElement('script');
@@ -133,26 +66,6 @@ $(document).ready(function() {
 	tag.src = "https://www.youtube.com/iframe_api";
 	var firstScriptTag = document.getElementsByTagName('script')[0];
 	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-	
-	$(document).mousemove(function(e) {
-		count++;
-		if( count == 50 ) {
-			var msg = client.createMessage("position",{
-				x:e.pageX,
-				y:e.pageY,
-				w: $(document).width(),
-				sid: client.sid
-			});
-			client.sendMessage(msg);
-			count = 0;
-		}
-	});
-
-	if( $(document).width() < 1600 ) {
-		borgs = new Borgs( $(document).width(), $(document).height(), getRandomInt( 9, 15 ) );	
-	} else { 
-		borgs = new Borgs( $(document).width(), $(document).height(), getRandomInt( 19, 24 ) );	
-	}
 
 	$("#video .logo").click(function(){
 		$("#videocontainer").show();
@@ -274,6 +187,4 @@ $(document).ready(function() {
 	$("#instructions .rightarrow").click(function(event){
 		nextOrFirst();
 	});
-
-	client.connect();
 });
