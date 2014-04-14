@@ -11,16 +11,16 @@ html, body { width: 100%; height: 100%; background-color: #62F6B2; }
 #facebook { position: absolute; top: 23px; right: 64px; width: 31px; height: 40px; background: url("../img/facebook.png") top left no-repeat; }
 #facebook:hover { background-position: -31px 0px; }
 
-
 #logo { cursor: pointer; position: absolute; top: 0px; left: 0px; width: 374px; height: 389px; }
 
-#buttons { width: 362px; height: 65px; margin: 0 auto; position: relative; }
+#buttons { width: 362px; height: 65px; margin: 0 auto; position: absolute; bottom: 50px; z-index: 1000; }
 #howitworks { position: absolute; top: 0px; left: 0px; width: 182px; height: 65px; background: url("../img/howitworks.png") top left no-repeat; }
 #howitworks:hover { background-position: -182px 0px; }
 #store { position: absolute; top: 0px; right: 0px; width: 181px; height: 65px; background: url("../img/appstore.png") top left no-repeat; }
 #store:hover { background-position: -181px 0px; }
 
-#videobutton { cursor: pointer; position: absolute; top: 0px; left: 0px; width: 149px; height: 43px; z-index: 100; display: none; }
+#videobutton { cursor: pointer; position: absolute; top: 5px; left: 38px; width: 97px; height: 52px; z-index: 100; display: none; background: url("../img/video.png") top left no-repeat; }
+#videobutton:hover { background-position: -97px 0px; }
 
 #videothumb:active { -webkit-transform: scale(.95,.95);
 	-webkit-transition:all .1s ease-in;
@@ -48,7 +48,7 @@ html, body { width: 100%; height: 100%; background-color: #62F6B2; }
     }
 }
 
-#sections .section.section-on {	display: block; opacity: 1;
+#sections .on {	display: block; opacity: 1;
 	-webkit-animation-duration: 0.5s;
 	-webkit-animation-name: fadeInFromNone;
 }
@@ -56,127 +56,33 @@ html, body { width: 100%; height: 100%; background-color: #62F6B2; }
 /*
 	VIDEO PLAYER
 */
-#video { position: relative; margin: 0px auto 50px auto; width: 960px; height: 580px; z-index: 100; }
+#video { position: relative; margin: 0px auto; width: 960px; height: 580px; z-index: 100; padding-top: 80px; }
 
-#videocontainer { position: absolute; bottom: 0px; left: 0px; width: 960px; height: 540px; display: none; }
+#videocontainer { position: absolute; top: 80px; left: 160px; width: 640px; height: 480px; display: none; }
 #player { width: 100%; height: 100%; }
-/*
-	#videocontainer iframe { width: 100%; height: 100%; }
-	<iframe width="960" height="540" src="//www.youtube.com/embed/mCSd9GA0ndc?wmode=opaque&hd=1;vq=large" frameborder="0" allowfullscreen></iframe>
-*/
 #videocontainer .close { cursor: pointer; position: absolute; right: -50px; top: 0px; width: 30px; height: 29px; }
 
 /*
 	INTERACTIVE INSTRUCTIONS
 */
 
-#instructions { width: 453px; margin: 0 auto; padding-top: 43px; position: relative;  }
+#instructions { width: 440px; margin: 0 auto; position: relative; padding-top: 80px; }
 #instructions .instruction { display: none; }
 #instructions .on { display: block; }
-#instructions .instruction p { font: normal 21px 'GM'; color: #5b5b5b; }
-#instructions .instruction .copy-two { margin: 0px auto 48px auto; line-height: 28px; }
-#instructions .instruction .copy-one { margin: 0px auto 76px auto; line-height: 28px; }
-#instructions .instruction .one { width: 293px; }
-#instructions .instruction .two { width: 330px; }
-#instructions .instruction .three { width: 347px; }
-#instructions .visual { display: block; width: 192px; height: 403px; position: absolute; left: 132px; }
-#instructions .leftarrow { cursor: pointer; position: absolute; top: 310px; left: 0px; opacity: 1; width: 30px; height: 55px; }
-#instructions .leftarrow:hover { opacity: .4; }
+#instructions .visual { display: block; width: 367px; height: 460px; position: absolute; left: 38px; }
+#instructions .leftarrow { cursor: pointer; position: absolute; top: 270px; left: 0px; width: 50px; height: 49px; background: url("../img/instructions/previous.png") top left no-repeat; z-index: 100; }
+#instructions .leftarrow:hover { background-position-x: -50px; }
 #instructions .leftarrow:active { -webkit-transform: scale(.9,.9);
 	-webkit-transition:all .1s ease-in;
 	-moz-transition:all .1s ease-in;
 	-o-transition:all .1s ease-in;
 	transition:all .1s ease-in;
 }
-#instructions .rightarrow { cursor: pointer; position: absolute; top: 310px; right: 0px; opacity: 1; width: 30px; height: 55px; }
-#instructions .rightarrow:hover { opacity: .4; }
+#instructions .rightarrow { cursor: pointer; position: absolute; top: 270px; right: 0px; width: 50px; height: 49px; background: url("../img/instructions/next.png") top left no-repeat; z-index: 100; }
+#instructions .rightarrow:hover { background-position-x: -50px; }
 #instructions .rightarrow:active { -webkit-transform: scale(.9,.9);
 	-webkit-transition:all .1s ease-in;
 	-moz-transition:all .1s ease-in;
 	-o-transition:all .1s ease-in;
 	transition:all .1s ease-in;
 }
-#instructions .rightarrow img, #instructions .leftarrow img { width: 100%; height: 100%; }
-
-
-/*@media only screen and ( max-width:640px ) {
-	body,html { height: 1020px; }
-
-	.social { display: none; }
-
-	#wrapper { width: 640px; }
-	
-	#buttons { bottom: 0px; left: 70px; width: 505px; }
-
-	#videobutton, #store, #videobuttonmobile, #howitworksbutton { display: none; }
-	#howitworksbuttonmobile, #storemobile { display: block; }
-
-	.break { display: none; }
-
-	#instructions { width: 570px; }
-	#instructions .leftarrow { left: 61px; }
-	#instructions .rightarrow { right: 61px; }
-	#instructions .instruction .visual { left: 192px; }
-	#instructions .instruction p { font-size: 28px; line-height: 33px; }
-	#instructions .instruction .copy-two { line-height: 33px; margin: 0px auto 28px auto; }
-	#instructions .instruction .copy-one { line-height: 33px; margin: 0px auto 61px auto; }
-
-	#instructions .instruction .one { width: 371px; }
-	#instructions .instruction .two { width: 330px; }
-	#instructions .instruction .three { width: 447px; }
-	#instructions .instruction .four { width: 570px; }
-
-
-	#video { position: relative; margin: 0px auto 0px auto; width: 600px; height: 338px; z-index: 100; }
-	#video .logo { cursor: pointer; position: absolute; top: 220px; left: 139px; width: 320px; height: 275px; }
-	#videocontainer { position: absolute; top: 0px; left: 0px; width: 600px; height: 338px; padding-top: 180px; }
-
-	#footer { height: 100px; }
-	#footer .links { padding-top: 29px; width: 545px; }
-	#footer a { font-size: 30px; }
-
-	#legal { padding-top: 240px; }
-	#legal h2 { font-size: 21px; }
-	#legal li a { font-size: 22px; }
-
-	#about { padding-top: 50px; }
-	#about p { font-size: 26px; line-height: 32px; width: 560px; }
-	#about .betalogo { margin-bottom: 34px; }
-	#about .betalogo img { width: 100px; height: 100px; }
-
-	#copyright { display: none; }
-	#copyright_mobile { display: block; position: fixed; bottom: 0px; left: 0px; width: 100%; height: 22px; background-color: #E6E6E6; z-index: 110; color: #bbb }
-	#copyright_mobile p { text-align: center; font: normal 12px 'HNB'; }
-}
-
-@media only screen and (max-width:640px) and (max-height:715px) {
-	body,html { height: 1000px; }
-
-	#wrapper { width: 640px; height: 680px; }
-
-	#buttons { bottom: 70px; }
-
-	#videocontainer { padding-top: 80px; }
-	#video .logo { top: 130px; }
-
-	#instructions { padding-top: 0px; }
-	#instructions .instruction .copy-one { margin: 0px auto 60px auto; }
-	#instructions .leftarrow, #instructions .rightarrow { top: 270px; }
-
-	#legal { padding-top: 184px; }
-
-	#about { padding-top: 19px; }
-	#about p { font-size: 26px; line-height: 32px; width: 560px; }
-	#about .betalogo { margin-bottom: 34px; }
-}
-
-@media only screen and ( max-height:715px ) and (min-width: 715px) {
-	#wrapper { width: 640px; height: 680px; }
-
-	#buttons { bottom: 70px; left: 166px; }
-
-	#video { position: relative; margin: 0px auto 0px auto; width: 600px; height: 338px; z-index: 100; }
-	#videocontainer { position: absolute; top: 0px; left: 0px; width: 600px; height: 338px; padding-top: 120px; }
-	#video .logo { left: 178px; }
-	#videocontainer .close { top: 122px; }
-}*/

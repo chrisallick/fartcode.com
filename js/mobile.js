@@ -48,25 +48,13 @@ var player, done, ready = false;
 var mobile = false;
 $(document).ready(function() {
 
-	$("#logo").css({
-		left: $("#video").width()/2 - $("#logo").width()/2,
-		top: $("#video").height()/2 - $("#logo").height()/2
+	$("#play").css({
+		left: $(document).width()/2 - $("#play").width()/2
 	});
 
-	$("#buttons").css({
-		left: $(document).width()/2 - $("#buttons").width()/2
+	$("#videocontainer").css({
+		left: $(document).width()/2 - $("#videocontainer").width()/2
 	});
-
-	$(window).resize(function(){
-		$("#logo").css({
-			left: $("#video").width()/2 - $("#logo").width()/2,
-			top: $("#video").height()/2 - $("#logo").height()/2
-		});
-
-		$("#buttons").css({
-			left: $(document).width()/2 - $("#buttons").width()/2
-		});
-	})
 
 	// 2. This code loads the IFrame Player API code asynchronously.
 	var tag = document.createElement('script');
@@ -85,32 +73,33 @@ $(document).ready(function() {
 
 	$("#howitworks").click(function(event){
 		event.preventDefault();
-		
+
 		$("#video").removeClass("on");
-		$("#howitworks").hide();
-		$("#videobutton").show();
 		$("#instructions").addClass("on");
-	});
 
-	$("#logo").click(function(event){
-		event.preventDefault();
+		$("#videocontainer").hide();
 
-		$("#videocontainer").show();
+		$(this).hide();
+		$("#play").hide();
+		$("#videobutton").show();
 	});
 
 	$("#videobutton").click(function(event){
 		event.preventDefault();
 
-		$("#videocontainer").hide();
-
-		$("#howitworks").show();
-		$("#videobutton").hide();
-
-		$("#instructions").removeClass("on");
 		$("#video").addClass("on");
+		$("#instructions").removeClass("on");
+
+		$(this).hide();
+		$("#play").show();
+		$("#howitworks").show();
 	});
 
-	$("#videocontainer .close").click(function(event){
-		$("#videocontainer").hide();
+	$("#play").click(function(event){
+		event.preventDefault();
+
+		$("#videocontainer").show();
+
+		$(this).hide();
 	});
 });
