@@ -53,6 +53,11 @@ $(document).ready(function() {
 		top: $("#video").height()/2 - $("#logo").height()/2
 	});
 
+	$("#playbutton").css({
+		left: $("#video").width()/2 - $("#playbutton").width()/2,
+		top: $("#video").height()/2 - $("#playbutton").height()/2 + 150
+	});
+
 	$("#buttons").css({
 		left: $(document).width()/2 - $("#buttons").width()/2
 	});
@@ -92,7 +97,7 @@ $(document).ready(function() {
 		$("#instructions").addClass("on");
 	});
 
-	$("#logo").click(function(event){
+	$("#logo, #playbutton").click(function(event){
 		event.preventDefault();
 
 		$("#videocontainer").show();
