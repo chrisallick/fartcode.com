@@ -48,8 +48,13 @@ var player, done, ready = false;
 var mobile = false;
 $(document).ready(function() {
 
-	$("#play").css({
-		left: $(document).width()/2 - $("#play").width()/2
+	$("#logo").css({
+		left: $("#video").width()/2 - $("#logo").width()/2
+	});
+
+	$("#playbutton").css({
+		left: $("#video").width()/2 - $("#playbutton").width()/2,
+		top: $("#video").height()/2 - $("#playbutton").height()/2 + 250
 	});
 
 	$("#videocontainer").css({
@@ -80,7 +85,7 @@ $(document).ready(function() {
 		$("#videocontainer").hide();
 
 		$(this).hide();
-		$("#play").hide();
+		$("#logo, #playbutton").hide();
 		$("#videobutton").show();
 	});
 
@@ -91,15 +96,15 @@ $(document).ready(function() {
 		$("#instructions").removeClass("on");
 
 		$(this).hide();
-		$("#play").show();
+		$("#logo, #playbutton").show();
 		$("#howitworks").show();
 	});
 
-	$("#play").click(function(event){
+	$("#logo, #playbutton").click(function(event){
 		event.preventDefault();
 
 		$("#videocontainer").show();
 
-		$(this).hide();
+		$("#logo, #playbutton").hide();
 	});
 });
