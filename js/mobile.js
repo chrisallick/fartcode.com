@@ -89,8 +89,9 @@ $(document).ready(function() {
 	$("#howitworks").click(function(event){
 		event.preventDefault();
 
-		$("#video").removeClass("on");
+		$(".section.on").removeClass("on");
 		$("#instructions").addClass("on");
+		nextOrFirst();
 
 		$("#videocontainer").hide();
 
@@ -102,8 +103,9 @@ $(document).ready(function() {
 	$("#videobutton").click(function(event){
 		event.preventDefault();
 
-		$("#video").addClass("on");
-		$("#instructions").removeClass("on");
+		$(".section.on").removeClass("on");
+		$("#instructions").addClass("on");
+		nextOrFirst();
 
 		$(this).hide();
 		$("#logo, #playbutton").show();
