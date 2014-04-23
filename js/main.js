@@ -53,6 +53,16 @@ $(document).ready(function() {
 		top: $("#video").height()/2 - $("#logo").height()/2
 	});
 
+	$("#about").css({
+		left: $(document).width()/2 - $("#about").width()/2,
+		top: $(document).height()/2 - $("#about").height()/2
+	});
+
+	$("#legal").css({
+		left: $(document).width()/2 - $("#legal").width()/2,
+		top: $(document).height()/2 - $("#legal").height()/2
+	});
+
 	$("#playbutton").css({
 		left: $("#video").width()/2 - $("#playbutton").width()/2,
 		top: $("#video").height()/2 - $("#playbutton").height()/2 + 150
@@ -91,10 +101,36 @@ $(document).ready(function() {
 	$("#howitworks").click(function(event){
 		event.preventDefault();
 		
-		$("#video").removeClass("on");
 		$("#howitworks").hide();
 		$("#videobutton").show();
+
+		$(".section.on").removeClass("on");
 		$("#instructions").addClass("on");
+		nextOrFirst();
+	});
+
+	$("#aboutlink").click(function(event){
+		event.preventDefault();
+
+		$(".section.on").removeClass("on");
+		$("#about").addClass("on");
+	});
+
+	$("#legallink").click(function(event){
+		event.preventDefault();
+
+		$(".section.on").removeClass("on");
+		$("#legal").addClass("on");
+	});
+
+	$("#about .close, #legal .close").click(function(event) {
+		event.preventDefault();
+
+		$(".section.on").removeClass("on");
+		$("#instructions").addClass("on");
+		$("#howitworks").hide();
+		$("#videobutton").show();
+		nextOrFirst();
 	});
 
 	$("#logo, #playbutton").click(function(event){
@@ -111,7 +147,7 @@ $(document).ready(function() {
 		$("#howitworks").show();
 		$("#videobutton").hide();
 
-		$("#instructions").removeClass("on");
+		$(".on").removeClass("on");
 		$("#video").addClass("on");
 	});
 

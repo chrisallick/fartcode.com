@@ -2,14 +2,25 @@ html, body { width: 100%; height: 100%; background-color: #62F6B2; }
 
 * { -webkit-tap-highlight-color: rgba(0,0,0,0); }
 
+@font-face { font-family: 'cloud'; src: url('../fonts/dcc.cloud.otf'); }
+.cloud { font-family: 'cloud'; }
+
 #wrapper { width: 100%; height: 100%; position: relative; text-align: center; margin: 0 auto; opacity: 0; }
 
 #copyright { position: absolute; top: 23px; left: 24px; width: 119px; height: 40px; background: url("../img/copyright.png") top left no-repeat; }
 #copyright:hover { background-position: -119px 0px; }
+
 #twitter { position: absolute; top: 23px; right: 26px; width: 38px; height: 40px; background: url("../img/twitter.png") top left no-repeat; }
 #twitter:hover { background-position: -38px 0px; }
+
 #facebook { position: absolute; top: 23px; right: 64px; width: 31px; height: 40px; background: url("../img/facebook.png") top left no-repeat; }
 #facebook:hover { background-position: -31px 0px; }
+
+#aboutlink { position: absolute; bottom: 35px; left: 35px; width: 53px; height: 15px; background: url("../img/about.png") top left no-repeat; }
+#aboutlink:hover { background-position: -53px 0px; }
+
+#legallink { position: absolute; bottom: 35px; right: 35px; width: 52px; height: 14px; background: url("../img/legal.png") top left no-repeat; }
+#legallink:hover { background-position: -52px 0px; }
 
 #buttons { width: 362px; height: 65px; margin: 0 auto; position: absolute; bottom: 50px; z-index: 1000; }
 #howitworks { position: absolute; top: 0px; left: 0px; width: 182px; height: 65px; background: url("../img/howitworks.png") top left no-repeat; }
@@ -87,3 +98,23 @@ html, body { width: 100%; height: 100%; background-color: #62F6B2; }
 	-o-transition:all .1s ease-in;
 	transition:all .1s ease-in;
 }
+
+/*
+	ABOUT INSTRUCTIONS
+*/
+
+#about { position: absolute; }
+#about p { font-size: 18px; width: 445px; text-align: center; margin-bottom: 34px; line-height: 28px; }
+#about .close { position: absolute; top: 0px; right: -100px; width: 50px; height: 49px; background: url("../img/closesection.png") top left no-repeat; }
+#about .close:hover { background-position: -50px 0px; }
+
+/*
+	LEGAL INSTRUCTIONS
+*/
+
+#legal { position: absolute; }
+#legal p { font-size: 18px; width: 445px; text-align: center; margin-bottom: 34px; line-height: 28px; }
+#legal .close { position: absolute; top: 0px; right: -100px; width: 50px; height: 49px; background: url("../img/closesection.png") top left no-repeat; }
+#legal .close:hover { background-position: -50px 0px; }
+#legal a:hover { color: #FFFFFF; }
+
