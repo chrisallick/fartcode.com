@@ -47,7 +47,7 @@
 			<a id="facebook" href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('http://touchroomapp.com'),'facebook-share-dialog','width=626,height=436'); return false;" target="_blank"></a>
 
 			<a id="aboutlink" href="#"></a>
-
+			
 			<a id="legallink" href="#"></a>
 
 			<div id="sections">

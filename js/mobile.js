@@ -61,6 +61,16 @@ $(document).ready(function() {
 		left: $(document).width()/2 - $("#videocontainer").width()/2
 	});
 
+	$("#about").css({
+		left: $(document).width()/2 - $("#about").width()/2,
+		top: $(document).height()/2 - $("#about").height()/2 - 120
+	});
+
+	$("#legal").css({
+		left: $(document).width()/2 - $("#legal").width()/2,
+		top: $(document).height()/2 - $("#legal").height()/2 - 120
+	});
+
 	// 2. This code loads the IFrame Player API code asynchronously.
 	var tag = document.createElement('script');
 
@@ -106,5 +116,29 @@ $(document).ready(function() {
 		$("#videocontainer").show();
 
 		$("#logo, #playbutton").hide();
+	});
+
+	$("#aboutlink").click(function(event){
+		event.preventDefault();
+
+		$(".section.on").removeClass("on");
+		$("#about").addClass("on");
+	});
+
+	$("#legallink").click(function(event){
+		event.preventDefault();
+
+		$(".section.on").removeClass("on");
+		$("#legal").addClass("on");
+	});
+
+	$("#about .close, #legal .close").click(function(event) {
+		event.preventDefault();
+
+		$(".section.on").removeClass("on");
+		$("#instructions").addClass("on");
+		$("#howitworks").hide();
+		$("#videobutton").show();
+		nextOrFirst();
 	});
 });

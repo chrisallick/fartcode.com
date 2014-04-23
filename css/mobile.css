@@ -2,18 +2,22 @@ html, body { width: 100%; height: 100%; background-color: #62F6B2; }
 
 * { -webkit-tap-highlight-color: rgba(0,0,0,0); }
 
-@font-face { font-family: 'cloud'; src: url('/fonts/dcc.cloud.otf'); }
+@font-face { font-family: 'cloud'; src: url('../fonts/dcc.cloud.otf'); }
 .cloud { font-family: 'cloud'; }
 
 #wrapper { width: 100%; height: 100%; position: relative; text-align: center; margin: 0 auto; opacity: 0; }
 
 #copyright { position: absolute; top: 23px; left: 24px; width: 168px; height: 24px; background: url("../img/mobile/copyright.png") top left no-repeat; }
+
 #facebook { position: absolute; top: 20px; right: 101px; width: 21px; height: 38px; background: url("../img/mobile/facebook.png") top left no-repeat; }
 #twitter { position: absolute; top: 23px; right: 26px; width: 46px; height: 36px; background: url("../img/mobile/twitter.png") top left no-repeat; }
 
-#howitworks { position: absolute; bottom: 27px; left: 19px; width: 286px; height: 102px; background: url("../img/mobile/howitworks.png") top left no-repeat; }
-#videobutton { position: absolute; bottom: 27px; left: 55px; width: 201px; height: 108px; background: url("../img/mobile/video.png") top left no-repeat; display: none; }
-#store { position: absolute; bottom: 27px; right: 21px; width: 286px; height: 102px; background: url("../img/mobile/appstore.png") top left no-repeat; }
+#aboutlink { position: absolute; bottom: 35px; left: 200px; font-size: 32px; }
+#legallink { position: absolute; bottom: 35px; right: 200px; font-size: 32px; }
+
+#howitworks { position: absolute; bottom: 110px; left: 19px; width: 286px; height: 102px; background: url("../img/mobile/howitworks.png") top left no-repeat; }
+#videobutton { position: absolute; bottom: 110px; left: 55px; width: 201px; height: 108px; background: url("../img/mobile/video.png") top left no-repeat; display: none; }
+#store { position: absolute; bottom: 110px; right: 21px; width: 286px; height: 102px; background: url("../img/mobile/appstore.png") top left no-repeat; }
 
 #sections .section { opacity: 0; display: none; }
 
@@ -60,3 +64,23 @@ html, body { width: 100%; height: 100%; background-color: #62F6B2; }
 #instructions .visual { display: block; width: 640px; height: 507px; position: absolute; left: 0px; }
 #instructions .leftarrow { position: absolute; top: 220px; left: 66px; opacity: 1; width: 50px; height: 49px; z-index: 100; }
 #instructions .rightarrow { position: absolute; top: 220px; right: 66px; opacity: 1; width: 50px; height: 49px; z-index: 100; }
+
+
+/*
+    ABOUT INSTRUCTIONS
+*/
+
+#about { position: absolute; }
+#about p { font-size: 18px; width: 480px; text-align: center; margin-bottom: 34px; line-height: 28px; }
+#about .close { position: absolute; top: 0px; right: -65px; width: 50px; height: 49px; background: url("../img/closesection.png") top left no-repeat; }
+#about .close:hover { background-position: -50px 0px; }
+
+/*
+    LEGAL INSTRUCTIONS
+*/
+
+#legal { position: absolute; }
+#legal p { font-size: 14px; width: 640px; text-align: center; margin-bottom: 28px; line-height: 24px; }
+#legal .close { position: absolute; top: -60px; right: 14px; width: 50px; height: 49px; background: url("../img/closesection.png") top left no-repeat; }
+#legal .close:hover { background-position: -50px 0px; }
+#legal a:hover { color: #FFFFFF; }
