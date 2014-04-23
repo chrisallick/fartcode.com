@@ -51,7 +51,7 @@
 			<a id="legallink" href="#"></a>
 
 			<div id="sections">
-				<div id="video" class="section">
+				<div id="video" class="section on">
 					<img id="logo" width="50%" height="50%" src="./img/logo.gif" />
 					<img id="playbutton" src="./img/playButton.png" />
 					<div id="videocontainer">
@@ -78,7 +78,7 @@
 					<p class="cloud">&copy; 2013 Goodby Silverstein &amp; Partners</p>
 					<a href="#" class="close"></a>
 				</div>
-				<div id="legal" class="section on">
+				<div id="legal" class="section">
 					<p class="cloud">3rd Party Libraries Used (and loved) by Fart Code</p>
 					<p class="cloud"><a href="https://github.com/AFNetworking/AFNetworking">AFNetworking</a> - <a href="https://github.com/AFNetworking/AFNetworking/blob/master/LICENSE">LICENSE</a></br>
 					<a href="https://github.com/jivadevoe/NSTimer-Blocks>NSTimer-Blocks">NSTimer-Blocks</a> by Jiva DeVoe - <a href="">LICENSE</a></br>
