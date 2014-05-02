@@ -10,10 +10,10 @@ html, body { width: 100%; height: 100%; background-color: #62F6B2; }
 #copyright { position: absolute; top: 23px; left: 24px; width: 119px; height: 40px; background: url("../img/copyright.png") top left no-repeat; }
 #copyright:hover { background-position: -119px 0px; }
 
-#twitter { position: absolute; top: 23px; right: 26px; width: 38px; height: 40px; background: url("../img/twitter.png") top left no-repeat; }
+#twitter { z-index: 1000; position: absolute; top: 23px; right: 26px; width: 38px; height: 40px; background: url("../img/twitter.png") top left no-repeat; }
 #twitter:hover { background-position: -38px 0px; }
 
-#facebook { position: absolute; top: 23px; right: 64px; width: 31px; height: 40px; background: url("../img/facebook.png") top left no-repeat; }
+#facebook { z-index: 1000; position: absolute; top: 23px; right: 64px; width: 31px; height: 40px; background: url("../img/facebook.png") top left no-repeat; }
 #facebook:hover { background-position: -31px 0px; }
 
 #aboutlink { position: absolute; bottom: 35px; left: 35px; width: 53px; height: 15px; background: url("../img/about.png") top left no-repeat; }
@@ -72,7 +72,8 @@ html, body { width: 100%; height: 100%; background-color: #62F6B2; }
 
 #videocontainer { position: absolute; top: 80px; left: 160px; width: 640px; height: 480px; display: none; }
 #player { width: 100%; height: 100%; }
-#videocontainer .close { cursor: pointer; position: absolute; right: -50px; top: 0px; width: 30px; height: 29px; }
+#videocontainer .close { cursor: pointer; position: absolute; right: -80px; top: 0px; width: 50px; height: 49px; background: url("../img/closesection.png") top left no-repeat; }
+#videocontainer .close:hover { background-position: -50px 0px; }
 
 /*
 	INTERACTIVE INSTRUCTIONS

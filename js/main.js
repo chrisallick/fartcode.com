@@ -123,7 +123,7 @@ $(document).ready(function() {
 		$("#legal").addClass("on");
 	});
 
-	$("#about .close, #legal .close").click(function(event) {
+	$("#about .close, #legal .close, #videocontainer .close").click(function(event) {
 		event.preventDefault();
 
 		$(".section.on").removeClass("on");
@@ -151,7 +151,8 @@ $(document).ready(function() {
 		$("#video").addClass("on");
 	});
 
-	$("#videocontainer .close").click(function(event){
-		$("#videocontainer").hide();
-	});
+	// $("#videocontainer .close").click(function(event) {
+	// 	event.preventDefault();
+	// 	$("#videocontainer").hide();
+	// });
 });
