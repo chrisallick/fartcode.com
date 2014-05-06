@@ -53,8 +53,7 @@ $(document).ready(function() {
 	});
 
 	$("#playbutton").css({
-		left: $("#video").width()/2 - $("#playbutton").width()/2,
-		top: $("#video").height()/2 - $("#playbutton").height()/2 + 250
+		left: $("#video").width()/2 - $("#playbutton").width()/2
 	});
 
 	$("#videocontainer").css({
@@ -63,12 +62,10 @@ $(document).ready(function() {
 
 	$("#about").css({
 		left: $(document).width()/2 - $("#about").width()/2,
-		top: $(document).height()/2 - $("#about").height()/2 - 120
 	});
 
 	$("#legal").css({
 		left: $(document).width()/2 - $("#legal").width()/2,
-		top: $(document).height()/2 - $("#legal").height()/2 - 120
 	});
 
 	// 2. This code loads the IFrame Player API code asynchronously.
@@ -104,7 +101,7 @@ $(document).ready(function() {
 		event.preventDefault();
 
 		$(".section.on").removeClass("on");
-		$("#instructions").addClass("on");
+		$("#video").addClass("on");
 		nextOrFirst();
 
 		$(this).hide();

@@ -73,9 +73,9 @@
 					<div class="rightarrow"></div>
 				</div>
 				<div id="about" class="section">
-					<p class="cloud">Telecommunication has traditionally relied on sight and sound. But what if you could touch someone from afar? Touch Room keeps your loved ones within arm's reach.</p>
-					<p class="cloud">Brought to you by the BETA Group of Goodby Silverstein &amp; Partners in San Francisco. We use technology to find interesting solutions to great problems. What we make is never final—instead we iterate and pivot.</p>
-					<p class="cloud">&copy; 2013 Goodby Silverstein &amp; Partners</p>
+					<p class="cloud">Fart Code from the GS&amp;P BETA Group.</p>
+					<p class="cloud">Get smart from your fart.<br/>Learn about nutrition the rad way.<br/>Scan food bar codes to discover their fart power.</p>
+					<p class="cloud">Brought to you by the BETA Group at Goodby Silverstein &amp; Partners in San Francisco.</p>
 					<a href="#" class="close"></a>
 				</div>
 				<div id="legal" class="section">
