@@ -11,14 +11,14 @@
 		<meta property="og:type" content="article" />
 		<meta property="og:image" content="http://fartcode.com/img/share_this_fb.png" />
 		<meta property="og:url" content="http://fartcode.com" />
-		<meta property="og:description" content="Fart code is an app that educates kids about nutrition in a fun, new way." />
+		<meta property="og:description" content="Get smart from your fart. Scan food to discover its fart power." />
 
         <meta name="twitter:card" value="summary">
         <meta name="twitter:creator" value="@chrisallick">
         <meta name="twitter:url" content="http://fartcode.com">
         <meta name="twitter:domain" content="http://fartcode.com">
         <meta name="twitter:title" content="Get smart from your Fart.">
-        <meta name="twitter:description" content="Fart code is an app that educates kids about nutrition in a fun, new way.">
+        <meta name="twitter:description" content="Get smart from your fart. Scan food to discover its fart power. fartcode.com">
         <meta name="twitter:image" content="http://fartcode.com/img/share_this_t.png">
         
         <link href='./css/reset.css' media='all' rel='stylesheet' type='text/css' />
@@ -43,7 +43,7 @@
 		<div id="wrapper">
 			<a id="copyright" href="http://gspsf.com" target="_blank"></a>
 
-			<a id="twitter" href="javascript:(function(){window.twttr=window.twttr||{};var D=550,A=450,C=screen.height,B=screen.width,H=Math.round((B/2)-(D/2)),G=0,F=document,E;if(C>A){G=Math.round((C/2)-(A/2))}window.twttr.shareWin=window.open('https://twitter.com/intent/tweet?text=Get smart with your fart! fartcode.com Available now in the App Store.','','left='+H+',top='+G+',width='+D+',height='+A+',personalbar=0,toolbar=0,scrollbars=1,resizable=1');E=F.createElement('script');E.src='http://platform.twitter.com/widgets.js';F.getElementsByTagName('head')[0].appendChild(E)}());" target="_blank"></a>
+			<a id="twitter" href="javascript:(function(){window.twttr=window.twttr||{};var D=550,A=450,C=screen.height,B=screen.width,H=Math.round((B/2)-(D/2)),G=0,F=document,E;if(C>A){G=Math.round((C/2)-(A/2))}window.twttr.shareWin=window.open('https://twitter.com/intent/tweet?text=Get smart from your fart. Scan food to discover its fart power. fartcode.com','','left='+H+',top='+G+',width='+D+',height='+A+',personalbar=0,toolbar=0,scrollbars=1,resizable=1');E=F.createElement('script');E.src='http://platform.twitter.com/widgets.js';F.getElementsByTagName('head')[0].appendChild(E)}());" target="_blank"></a>
 			<a id="facebook" href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('http://fartcode.com'),'facebook-share-dialog','width=626,height=436'); return false;" target="_blank"></a>
 
 			<a id="aboutlink" href="#"></a>
@@ -88,7 +88,7 @@
 					<a href="https://github.com/mayoff/uiimage-from-animated-gif">UIImage from Animated GIF</a> by Rob Mayoff - <a href="http://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a></br>
 					<a href="https://developers.google.com/analytics/devguides/collection/ios/">Google Analaytics iOS SDK<a/> - <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2.0</a> and <a href="http://creativecommons.org/licenses/by/3.0/">CC 3.0</a></p>
 
-					<p class="cloud"><a href="./legal.html" target="_blank">Terms and Conditions</a></p>
+					<p class="cloud"><a href="./toc.html" target="_blank">Terms and Conditions</a></p>
 					<a href="#" class="close"></a>
 				</div>
 			</div>
