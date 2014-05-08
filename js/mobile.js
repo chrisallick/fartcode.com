@@ -46,6 +46,7 @@ $(window).load(function(){
 
 var player, done, ready = false;
 var mobile = false;
+var section = "video";
 $(document).ready(function() {
 
 	$("#logo").css({
@@ -86,6 +87,8 @@ $(document).ready(function() {
 	$("#howitworks").click(function(event){
 		event.preventDefault();
 
+		section = "howitworks";
+
 		$(".section.on").removeClass("on");
 		$("#instructions").addClass("on");
 		nextOrFirst();
@@ -99,6 +102,8 @@ $(document).ready(function() {
 
 	$("#videobutton").click(function(event){
 		event.preventDefault();
+
+		section = "video";
 
 		$(".section.on").removeClass("on");
 		$("#video").addClass("on");
@@ -135,9 +140,17 @@ $(document).ready(function() {
 		event.preventDefault();
 
 		$(".section.on").removeClass("on");
-		$("#instructions").addClass("on");
-		$("#howitworks").hide();
-		$("#videobutton").show();
-		nextOrFirst();
+
+		if( section == "howitworks" ) {
+			$("#instructions").addClass("on");
+			$("#howitworks").hide();
+			$("#videobutton").show();
+			nextOrFirst();
+		} else if( section == "video" ) {
+			$("#videocontainer").hide();
+			$("#video").addClass("on");
+			$("#howitworks").show();
+			$("#videobutton").hide();
+		}
 	});
 });

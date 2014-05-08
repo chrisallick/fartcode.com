@@ -46,6 +46,7 @@ $(window).load(function(){
 
 var player, done, ready = false;
 var mobile = false;
+var section = "video";
 $(document).ready(function() {
 
 	$("#logo").css({
@@ -115,6 +116,8 @@ $(document).ready(function() {
 
 	$("#howitworks").click(function(event){
 		event.preventDefault();
+
+		section = "howitworks";
 		
 		$("#howitworks").hide();
 		$("#videobutton").show();
@@ -142,10 +145,18 @@ $(document).ready(function() {
 		event.preventDefault();
 
 		$(".section.on").removeClass("on");
-		$("#instructions").addClass("on");
-		$("#howitworks").hide();
-		$("#videobutton").show();
-		nextOrFirst();
+
+		if( section == "howitworks" ) {
+			$("#instructions").addClass("on");
+			$("#howitworks").hide();
+			$("#videobutton").show();
+			nextOrFirst();
+		} else if( section == "video" ) {
+			$("#videocontainer").hide();
+			$("#video").addClass("on");
+			$("#howitworks").show();
+			$("#videobutton").hide();
+		}
 	});
 
 	$("#logo, #playbutton").click(function(event){
@@ -157,6 +168,8 @@ $(document).ready(function() {
 	$("#videobutton").click(function(event){
 		event.preventDefault();
 
+		section = "video";
+
 		$("#videocontainer").hide();
 
 		$("#howitworks").show();
@@ -165,9 +178,4 @@ $(document).ready(function() {
 		$(".on").removeClass("on");
 		$("#video").addClass("on");
 	});
-
-	// $("#videocontainer .close").click(function(event) {
-	// 	event.preventDefault();
-	// 	$("#videocontainer").hide();
-	// });
 });
