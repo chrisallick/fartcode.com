@@ -39,9 +39,17 @@ $(window).load(function(){
 		window.scrollTo(0, 1);
 	}, 10);
 
-	$("#wrapper").animate({
-		opacity: 1
-	});
+	if( gup("pw") == "gsp7202014" ) {
+		$("#wrapper").animate({
+			opacity: 1
+		});		
+	} else {
+		$("body,html").css({
+			backgroundColor: "white"
+		});
+
+		$("#wrapper").remove();
+	}
 });
 
 var player, done, ready = false;
