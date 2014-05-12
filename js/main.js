@@ -39,17 +39,17 @@ $(window).load(function(){
 		window.scrollTo(0, 1);
 	}, 10);
 
-	if( gup("pw") == "gsp7202014" ) {
+	// if( gup("pw") == "gsp7202014" ) {
 		$("#wrapper").animate({
 			opacity: 1
-		});		
-	} else {
-		$("body,html").css({
-			backgroundColor: "white"
 		});
+	// } else {
+	// 	$("body,html").css({
+	// 		backgroundColor: "white"
+	// 	});
 
-		$("#wrapper").remove();
-	}
+	// 	$("#wrapper").remove();
+	// }
 });
 
 var player, done, ready = false;
