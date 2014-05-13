@@ -146,6 +146,8 @@ $(document).ready(function() {
 
 		$(".section.on").removeClass("on");
 
+		$("#videocontainer .iframe").remove();
+
 		if( section == "howitworks" ) {
 			$("#instructions").addClass("on");
 			$("#howitworks").hide();
@@ -161,6 +163,8 @@ $(document).ready(function() {
 
 	$("#logo, #playbutton").click(function(event){
 		event.preventDefault();
+
+		$("#videocontainer").append('</a><iframe class="iframe" width="100%" height="100%" src="http://www.youtube.com/embed/6f4LlON4yI0?autoplay=1" frameborder="0" allowfullscreen></iframe>');
 
 		$("#videocontainer").show();
 	});

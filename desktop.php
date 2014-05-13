@@ -56,8 +56,8 @@
 					<img id="logo" width="50%" height="50%" src="./img/logo.gif" />
 					<img id="playbutton" src="./img/playButton.png" />
 					<div id="videocontainer">
-						<a href="#" class="close"></a>
-						<iframe width="100%" height="100%" src="//www.youtube.com/embed/6f4LlON4yI0" frameborder="0" allowfullscreen></iframe>
+						<a href="#" class="close">
+						<!-- <iframe width="100%" height="100%" src="http://www.youtube.com/embed/6f4LlON4yI0" frameborder="0" allowfullscreen></iframe> -->
 					</div>
 				</div>
 				<div id="instructions" class="section">
