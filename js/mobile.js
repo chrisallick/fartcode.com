@@ -1,3 +1,4 @@
+
 /**
  * Returns a random number between min and max
  */
@@ -34,6 +35,31 @@ function previousOrLast() {
 	}
 }
 
+doOnOrientationChange = function() {
+    switch(window.orientation) {  
+        case -90:
+        case 90:
+            setTimeout(function(){
+                window.scrollTo(0, 1);
+                $("#wrapper").hide();
+                $("#landscape .rotate").css({
+                	left: $(document).width()/2 - $("#landscape .rotate").width()/2,
+                	top: $(document).height()/2 - $("#landscape .rotate").height()/2,
+                })
+                $("#landscape").show();
+            }, 10);
+            break; 
+        default:
+            $("#landscape").hide();
+            $("#wrapper").show();
+            setTimeout(function(){
+                window.scrollTo(0, 1);
+            }, 100);
+            break; 
+    }
+}
+
+
 $(window).load(function(){	
 	setTimeout(function(){
 		window.scrollTo(0, 1);
@@ -48,6 +74,9 @@ var player, done, ready = false;
 var mobile = false;
 var section = "video";
 $(document).ready(function() {
+
+	window.onorientationchange = doOnOrientationChange;
+	doOnOrientationChange();
 
 	$("#logo").css({
 		left: $("#video").width()/2 - $("#logo").width()/2

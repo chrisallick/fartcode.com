@@ -100,5 +100,8 @@
 			<a id="videobutton" href="#" target="_blank"></a>
 			<a id="store" href="https://itunes.apple.com/us/app/touch-room/id689802194?ls=1&mt=8" target="itunes_store"></a>
 		</div>
+		<div id="landscape">
+			<img class="rotate" src="./img/mobile/rotate.png" />
+		</div>
 	</body>
 </html
