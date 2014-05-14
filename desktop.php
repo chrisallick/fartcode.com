@@ -56,7 +56,7 @@
 					<img id="logo" width="50%" height="50%" src="./img/logo.gif" />
 					<img id="playbutton" src="./img/playButton.png" />
 					<div id="videocontainer">
-						<a href="#" class="close">
+						<a href="#" class="close"></a>
 						<!-- <iframe width="100%" height="100%" src="http://www.youtube.com/embed/6f4LlON4yI0" frameborder="0" allowfullscreen></iframe> -->
 					</div>
 				</div>
@@ -77,6 +77,7 @@
 					<p class="cloud">Fart Code from the GS&amp;P BETA Group.</p>
 					<p class="cloud">Get smart from your fart.<br/>Learn about nutrition the rad way.<br/>Scan food bar codes to discover their fart power.</p>
 					<p class="cloud">Brought to you by the BETA Group at Goodby Silverstein &amp; Partners in San Francisco.</p>
+					
 					<a href="#" class="close"></a>
 				</div>
 				<div id="legal" class="section">

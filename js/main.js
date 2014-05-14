@@ -44,14 +44,15 @@ $(window).load(function(){
 	});
 });
 
-var player, done, ready = false;
-var mobile = false;
-var section = "video";
-$(document).ready(function() {
+recenter = function() {
+	$("#video").css({
+		left: $(document).width()/2-$("#video").width()/2,
+		top: $(document).height()/2-$("#video").height()/2
+	});
 
-	$("#logo").css({
-		left: $("#video").width()/2 - $("#logo").width()/2,
-		top: $("#video").height()/2 - $("#logo").height()/2
+	$("#instructions").css({
+		left: $(document).width()/2-$("#instructions").width()/2,
+		top: $(document).height()/2-$("#instructions").height()/2
 	});
 
 	$("#about").css({
@@ -64,40 +65,26 @@ $(document).ready(function() {
 		top: $(document).height()/2 - $("#legal").height()/2
 	});
 
-	$("#playbutton").css({
-		left: $("#video").width()/2 - $("#playbutton").width()/2,
-		top: $("#video").height()/2 - $("#playbutton").height()/2 + 150
-	});
-
 	$("#buttons").css({
 		left: $(document).width()/2 - $("#buttons").width()/2
 	});
 
-	$(window).resize(function(){
-		$("#logo").css({
-			left: $("#video").width()/2 - $("#logo").width()/2,
-			top: $("#video").height()/2 - $("#logo").height()/2
-		});
-
+	if( $(document).height() < 720 ) {
 		$("#buttons").css({
-			left: $(document).width()/2 - $("#buttons").width()/2
+			bottom: 20
 		});
+	}
+}
 
-		$("#playbutton").css({
-			left: $("#video").width()/2 - $("#playbutton").width()/2,
-			top: $("#video").height()/2 - $("#playbutton").height()/2 + 150
-		});
+var player, done, ready = false;
+var mobile = false;
+var section = "video";
+$(document).ready(function() {
 
-		$("#about").css({
-			left: $(document).width()/2 - $("#about").width()/2,
-			top: $(document).height()/2 - $("#about").height()/2
-		});
-
-		$("#legal").css({
-			left: $(document).width()/2 - $("#legal").width()/2,
-			top: $(document).height()/2 - $("#legal").height()/2
-		});
+	$(window).resize(function(){
+		recenter();
 	})
+	recenter();
 
 	// 2. This code loads the IFrame Player API code asynchronously.
 	var tag = document.createElement('script');
@@ -164,7 +151,7 @@ $(document).ready(function() {
 	$("#logo, #playbutton").click(function(event){
 		event.preventDefault();
 
-		$("#videocontainer").append('</a><iframe class="iframe" width="100%" height="100%" src="http://www.youtube.com/embed/6f4LlON4yI0?autoplay=1" frameborder="0" allowfullscreen></iframe>');
+		$("#videocontainer").append('<iframe class="iframe" width="100%" height="100%" src="http://www.youtube.com/embed/6f4LlON4yI0?autoplay=1" frameborder="0" allowfullscreen></iframe>');
 
 		$("#videocontainer").show();
 	});

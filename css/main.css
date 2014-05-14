@@ -5,7 +5,7 @@ html, body { width: 100%; height: 100%; background-color: #5AF9B1; }
 @font-face { font-family: 'cloud'; src: url('../fonts/dcc.cloud.otf'); }
 .cloud { font-family: 'cloud'; }
 
-#wrapper { width: 100%; height: 100%; position: relative; text-align: center; margin: 0 auto; opacity: 0; }
+#wrapper { width: 100%; height: 100%; min-height: 640px; position: relative; text-align: center; margin: 0 auto; opacity: 0; }
 
 #copyright { position: absolute; top: 23px; left: 24px; width: 119px; height: 40px; background: url("../img/copyright.png") top left no-repeat; }
 #copyright:hover { background-position: -119px 0px; }
@@ -65,12 +65,12 @@ html, body { width: 100%; height: 100%; background-color: #5AF9B1; }
 /*
 	VIDEO PLAYER
 */
-#video { position: relative; margin: 0px auto; width: 960px; height: 580px; z-index: 100; padding-top: 80px; }
+#video { position: absolute; width: 960px; height: 510px; z-index: 100; }
 
-#logo { cursor: pointer; position: absolute; top: 0px; left: 0px; width: 374px; height: 389px; }
-#playbutton { cursor: pointer; position: absolute; top: 0px; left: 0px; width: 60px; height: 58px; }
+#logo { cursor: pointer; display: block; width: 374px; height: 389px; position: absolute; top: 70px; left: 300px; }
+#playbutton { cursor: pointer; display: block; width: 60px; height: 58px; position: absolute; top: 380px; left: 442px; }
 
-#videocontainer { position: absolute; top: 80px; left: 28px; width: 854px; height: 510px; display: none; }
+#videocontainer { position: absolute; top: 0px; left: 54px; width: 854px; height: 510px; display: none; }
 #player { width: 100%; height: 100%; }
 #videocontainer .close { cursor: pointer; position: absolute; right: -80px; top: 0px; width: 50px; height: 49px; background: url("../img/closesection.png") top left no-repeat; }
 #videocontainer .close:hover { background-position: -50px 0px; }
@@ -79,7 +79,7 @@ html, body { width: 100%; height: 100%; background-color: #5AF9B1; }
 	INTERACTIVE INSTRUCTIONS
 */
 
-#instructions { width: 440px; margin: 0 auto; position: relative; padding-top: 80px; }
+#instructions { width: 440px; height: 460px; position: absolute; }
 #instructions .instruction { display: none; }
 #instructions .on { display: block; }
 #instructions .visual { display: block; width: 367px; height: 460px; position: absolute; left: 38px; }
