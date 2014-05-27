@@ -7,28 +7,28 @@ html, body { width: 100%; height: 100%; background-color: #5AF9B1; }
 
 #wrapper { width: 100%; height: 100%; min-height: 640px; position: relative; text-align: center; margin: 0 auto; opacity: 0; }
 
-#copyright { position: absolute; top: 23px; left: 24px; width: 119px; height: 40px; background: url("../img/copyright.png") top left no-repeat; }
+#copyright { position: absolute; top: 23px; left: 24px; width: 119px; height: 40px; background: url("../img/copyright.png") top left no-repeat; background-size: 200% 100%; }
 #copyright:hover { background-position: -119px 0px; }
 
-#twitter { z-index: 1000; position: absolute; top: 23px; right: 26px; width: 38px; height: 40px; background: url("../img/twitter.png") top left no-repeat; }
+#twitter { z-index: 1000; position: absolute; top: 23px; right: 26px; width: 38px; height: 40px; background: url("../img/twitter.png") top left no-repeat; background-size: 200% 100%; }
 #twitter:hover { background-position: -38px 0px; }
 
-#facebook { z-index: 1000; position: absolute; top: 23px; right: 64px; width: 31px; height: 40px; background: url("../img/facebook.png") top left no-repeat; }
+#facebook { z-index: 1000; position: absolute; top: 23px; right: 64px; width: 31px; height: 40px; background: url("../img/facebook.png") top left no-repeat; background-size: 200% 100%; }
 #facebook:hover { background-position: -31px 0px; }
 
-#aboutlink { position: absolute; bottom: 35px; left: 35px; width: 53px; height: 15px; background: url("../img/about.png") top left no-repeat; }
+#aboutlink { position: absolute; bottom: 35px; left: 35px; width: 53px; height: 15px; background: url("../img/about.png") top left no-repeat; background-size: 200% 100%; }
 #aboutlink:hover { background-position: -53px 0px; }
 
-#legallink { position: absolute; bottom: 35px; right: 35px; width: 52px; height: 14px; background: url("../img/legal.png") top left no-repeat; }
+#legallink { position: absolute; bottom: 35px; right: 35px; width: 52px; height: 14px; background: url("../img/legal.png") top left no-repeat; background-size: 200% 100%; }
 #legallink:hover { background-position: -52px 0px; }
 
 #buttons { width: 362px; height: 65px; margin: 0 auto; position: absolute; bottom: 50px; z-index: 1000; }
-#howitworks { position: absolute; top: 0px; left: 0px; width: 182px; height: 65px; background: url("../img/howitworks.png") top left no-repeat; }
+#howitworks { position: absolute; top: 0px; left: 0px; width: 182px; height: 65px; background: url("../img/howitworks.png") top left no-repeat; background-size: 200% 100%; }
 #howitworks:hover { background-position: -182px 0px; }
-#store { position: absolute; top: 0px; right: 0px; width: 181px; height: 65px; background: url("../img/appstore.png") top left no-repeat; }
+#store { position: absolute; top: 0px; right: 0px; width: 181px; height: 65px; background: url("../img/appstore.png") top left no-repeat; background-size: 200% 100%; }
 #store:hover { background-position: -181px 0px; }
 
-#videobutton { cursor: pointer; position: absolute; top: 5px; left: 38px; width: 97px; height: 52px; z-index: 100; display: none; background: url("../img/video.png") top left no-repeat; }
+#videobutton { cursor: pointer; position: absolute; top: 5px; left: 38px; width: 97px; height: 52px; z-index: 100; display: none; background: url("../img/video.png") top left no-repeat; background-size: 200% 100%; }
 #videobutton:hover { background-position: -97px 0px; }
 
 #videothumb:active { -webkit-transform: scale(.95,.95);
@@ -68,12 +68,14 @@ html, body { width: 100%; height: 100%; background-color: #5AF9B1; }
 #video { position: absolute; width: 960px; height: 510px; z-index: 100; }
 
 #logo { cursor: pointer; display: block; width: 374px; height: 389px; position: absolute; top: 70px; left: 300px; }
-#playbutton { cursor: pointer; display: block; width: 60px; height: 58px; position: absolute; top: 380px; left: 442px; }
+#playbutton { cursor: pointer; display: block; width: 60px; height: 58px; position: absolute; top: 380px; left: 442px; background: url("../img/playButton.png") top left no-repeat; background-size: 200% 100%; }
+#playbutton:hover { background-position: -60px 0px; }
 
 #videocontainer { position: absolute; top: 0px; left: 54px; width: 854px; height: 510px; display: none; }
 #player { width: 100%; height: 100%; }
-#videocontainer .close { cursor: pointer; position: absolute; right: -80px; top: 0px; width: 50px; height: 49px; background: url("../img/closesection.png") top left no-repeat; }
+#videocontainer .close { cursor: pointer; position: absolute; right: -80px; top: 0px; width: 50px; height: 49px; background: url("../img/closesection.png") top left no-repeat; background-size: 200% 100%; }
 #videocontainer .close:hover { background-position: -50px 0px; }
+
 
 /*
 	INTERACTIVE INSTRUCTIONS
@@ -82,8 +84,8 @@ html, body { width: 100%; height: 100%; background-color: #5AF9B1; }
 #instructions { width: 440px; height: 460px; position: absolute; }
 #instructions .instruction { display: none; }
 #instructions .on { display: block; }
-#instructions .visual { display: block; width: 367px; height: 460px; position: absolute; left: 38px; }
-#instructions .leftarrow { cursor: pointer; position: absolute; top: 180px; left: 0px; width: 50px; height: 49px; background: url("../img/instructions/previous.png") top left no-repeat; z-index: 100; }
+#instructions .visual { display: block; width: 367px; height: 460px; position: absolute; left: 38px; background-size: 100% 100%; }
+#instructions .leftarrow { cursor: pointer; position: absolute; top: 180px; left: 0px; width: 50px; height: 49px; background: url("../img/instructions/previous.png") top left no-repeat; z-index: 100; background-size: 200% 100%; }
 #instructions .leftarrow:hover { background-position-x: -50px; }
 #instructions .leftarrow:active { -webkit-transform: scale(.9,.9);
 	-webkit-transition:all .1s ease-in;
@@ -91,7 +93,7 @@ html, body { width: 100%; height: 100%; background-color: #5AF9B1; }
 	-o-transition:all .1s ease-in;
 	transition:all .1s ease-in;
 }
-#instructions .rightarrow { cursor: pointer; position: absolute; top: 180px; right: 0px; width: 50px; height: 49px; background: url("../img/instructions/next.png") top left no-repeat; z-index: 100; }
+#instructions .rightarrow { cursor: pointer; position: absolute; top: 180px; right: 0px; width: 50px; height: 49px; background: url("../img/instructions/next.png") top left no-repeat; z-index: 100; background-size: 200% 100%; }
 #instructions .rightarrow:hover { background-position-x: -50px; }
 #instructions .rightarrow:active { -webkit-transform: scale(.9,.9);
 	-webkit-transition:all .1s ease-in;

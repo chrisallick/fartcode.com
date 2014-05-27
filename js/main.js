@@ -109,6 +109,8 @@ $(document).ready(function() {
 		$("#howitworks").hide();
 		$("#videobutton").show();
 
+		$("#videocontainer .iframe").remove();
+
 		$(".section.on").removeClass("on");
 		$("#instructions").addClass("on");
 		nextOrFirst();
@@ -117,12 +119,16 @@ $(document).ready(function() {
 	$("#aboutlink").click(function(event){
 		event.preventDefault();
 
+		$("#videocontainer .iframe").remove();
+
 		$(".section.on").removeClass("on");
 		$("#about").addClass("on");
 	});
 
 	$("#legallink").click(function(event){
 		event.preventDefault();
+
+		$("#videocontainer .iframe").remove();
 
 		$(".section.on").removeClass("on");
 		$("#legal").addClass("on");
